@@ -5,7 +5,7 @@
 Built by [diShine Digital Agency](https://dishine.it).
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3e00be42-8194-4de7-99fb-a40ecea2b4bd" alt="Bonjour dashboard — dark theme with news feeds, weather, markets, and calendar widgets" width="100%">
+  <img src="docs/images/themes/bonjour_main_dashboard.png" alt="Bonjour dashboard — dark theme with news feeds, weather, markets, and calendar widgets" width="100%">
 </p>
 
 <p align="center">
