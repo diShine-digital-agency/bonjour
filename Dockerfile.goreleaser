@@ -1,0 +1,7 @@
+FROM alpine:3.21
+
+WORKDIR /app
+COPY bonjour .
+
+EXPOSE 8080/tcp
+ENTRYPOINT ["/app/bonjour", "--config", "/app/config/bonjour.yml"]

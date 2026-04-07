@@ -1,0 +1,101 @@
+branding:
+  logo-text: Bonjour
+  app-name: Bonjour
+  # favicon-url: /assets/favicon.svg
+  # app-icon-url: /assets/app-icon.png
+
+document:
+  # Auto-refresh the dashboard every 5 minutes (set to 0 to disable)
+  auto-refresh-minutes: 5
+
+pages:
+  - name: Dashboard
+    columns:
+      - size: small
+        widgets:
+          - type: search
+            search-engine: google
+            autofocus: true
+            placeholder: Search the web…
+
+          - type: calendar
+            first-day-of-week: monday
+
+          - type: weather
+            location: Milan, Italy
+            units: metric
+            hour-format: 24h
+
+          - type: bookmarks
+            groups:
+              - title: diShine Tools
+                links:
+                  - title: GitHub
+                    url: https://github.com/diShine-digital-agency
+                  - title: Analytics
+                    url: https://analytics.google.com
+                  - title: Search Console
+                    url: https://search.google.com/search-console
+
+              - title: Resources
+                links:
+                  - title: Google Fonts
+                    url: https://fonts.google.com
+                  - title: MDN Web Docs
+                    url: https://developer.mozilla.org
+                  - title: Can I Use
+                    url: https://caniuse.com
+
+      - size: full
+        widgets:
+          - type: group
+            widgets:
+              - type: hacker-news
+              - type: lobsters
+
+          - type: rss
+            limit: 15
+            collapse-after: 5
+            cache: 12h
+            feeds:
+              - url: https://www.smashingmagazine.com/feed/
+                title: Smashing Magazine
+              - url: https://css-tricks.com/feed/
+                title: CSS-Tricks
+              - url: https://web.dev/feed.xml
+                title: web.dev
+
+      - size: small
+        widgets:
+          - type: markets
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: EURUSD=X
+                name: EUR/USD
+
+          - type: releases
+            cache: 1d
+            repositories:
+              - diShine-digital-agency/bonjour
+              - golang/go
+              - docker/compose
+
+          - type: monitor
+            cache: 1m
+            title: Services
+            sites:
+              - title: Bonjour Dashboard
+                url: http://localhost:8080
+                icon: si:google
+
+  # You can add more pages:
+  # - name: Projects
+  #   columns:
+  #     - size: full
+  #       widgets:
+  #         - type: rss
+  #           feeds:
+  #             - url: https://your-feed-url.com/rss
