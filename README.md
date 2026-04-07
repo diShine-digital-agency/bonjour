@@ -5,7 +5,7 @@
 Built by [diShine Digital Agency](https://dishine.it).
 
 <p align="center">
-  <img src="[https://github.com/user-attachments/assets/3e00be42-8194-4de7-99fb-a40ecea2b4bd](https://github.com/diShine-digital-agency/bonjour/blob/fb7d6fb941c79d7b1344d30acb1a5d92dc921deb/docs/images/themes/bonjour_main_dashboard.png?raw=true)" alt="Bonjour dashboard — dark theme with news feeds, weather, markets, and calendar widgets" width="100%">
+  ![bonjour Dashboard]([https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png](https://raw.githubusercontent.com/diShine-digital-agency/bonjour/fb7d6fb941c79d7b1344d30acb1a5d92dc921deb/docs/images/themes/bonjour_main_dashboard.png) "bonjour Dashboard")
 </p>
 
 <p align="center">
