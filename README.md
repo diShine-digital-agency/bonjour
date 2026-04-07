@@ -5,7 +5,7 @@
 Built by [diShine Digital Agency](https://dishine.it).
 
 <p align="center">
-  ![bonjour Dashboard]([https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png](https://raw.githubusercontent.com/diShine-digital-agency/bonjour/fb7d6fb941c79d7b1344d30acb1a5d92dc921deb/docs/images/themes/bonjour_main_dashboard.png) "bonjour Dashboard")
+  ![bonjour Dashboard](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png](https://raw.githubusercontent.com/diShine-digital-agency/bonjour/fb7d6fb941c79d7b1344d30acb1a5d92dc921deb/docs/images/themes/bonjour_main_dashboard.png "bonjour Dashboard")
 </p>
 
 <p align="center">
