@@ -1,6 +1,10 @@
-# Bonjour
+# Bonjour.
 
 **A self-hosted dashboard that puts your feeds, data, and tools in one place.**
+
+Bonjour is a self-hosted dashboard you configure with a single YAML file and run as one Go binary (under 20 MB). It aggregates the things you check every day — RSS feeds, Hacker News, weather, stock and crypto prices, YouTube channels, server uptime, Docker container status — into a single page you control.
+
+There is no database, no JavaScript framework, no build pipeline. You write a `bonjour.yml`, run the binary or a Docker container, and open your browser. The dashboard is responsive and works on desktop and mobile.
 
 Built by [diShine Digital Agency](https://dishine.it).
 
@@ -16,16 +20,6 @@ Built by [diShine Digital Agency](https://dishine.it).
 <p align="center">
   <img src="docs/images/themes/bonjour_view_3_infrastructure.png" alt="Bonjour dashboard — theme infrastructure" width="100%">
 </p>
-
----
-
-## What is Bonjour
-
-Bonjour is a self-hosted dashboard you configure with a single YAML file and run as one Go binary (under 20 MB). It aggregates the things you check every day — RSS feeds, Hacker News, weather, stock and crypto prices, YouTube channels, server uptime, Docker container status — into a single page you control.
-
-There is no database, no JavaScript framework, no build pipeline. You write a `bonjour.yml`, run the binary or a Docker container, and open your browser. The dashboard is responsive and works on desktop and mobile.
-
-It is a fork of [Glance](https://github.com/glanceapp/glance), extended with the diShine design system, built-in authentication, a theme picker, and additional widgets.
 
 ---
 
