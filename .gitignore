@@ -2,6 +2,7 @@
 bonjour
 bonjour.exe
 build/
+dist/
 
 # IDE
 .idea/

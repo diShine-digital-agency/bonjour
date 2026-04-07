@@ -76,10 +76,10 @@ type MountpointInfo struct {
 type SystemInfoRequest struct {
 	CPUTempSensor            string                       `yaml:"cpu-temp-sensor"`
 	HideMountpointsByDefault bool                         `yaml:"hide-mountpoints-by-default"`
-	Mountpoints              map[string]MointpointRequest `yaml:"mountpoints"`
+	Mountpoints              map[string]MountpointRequest `yaml:"mountpoints"`
 }
 
-type MointpointRequest struct {
+type MountpointRequest struct {
 	Name string `yaml:"name"`
 	Hide *bool  `yaml:"hide"`
 }
@@ -198,7 +198,7 @@ func Collect(req *SystemInfoRequest) (*SystemInfo, []error) {
 		addErr(fmt.Errorf("getting swap memory info: %v", err))
 	}
 
-	// currently disabled on Windows because it requires elevated privilidges, otherwise
+	// currently disabled on Windows because it requires elevated privileges, otherwise
 	// keeps returning a single sensor with key "ACPI\\ThermalZone\\TZ00_0" which
 	// doesn't seem to be the CPU sensor or correspond to anything useful when
 	// compared against the temperatures Libre Hardware Monitor reports.
@@ -229,7 +229,7 @@ func Collect(req *SystemInfoRequest) (*SystemInfo, []error) {
 	}
 
 	addedMountpoints := map[string]struct{}{}
-	addMountpointInfo := func(requestedPath string, mpReq MointpointRequest) {
+	addMountpointInfo := func(requestedPath string, mpReq MountpointRequest) {
 		if _, exists := addedMountpoints[requestedPath]; exists {
 			return
 		}

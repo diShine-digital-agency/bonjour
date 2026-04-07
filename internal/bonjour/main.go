@@ -2,10 +2,7 @@ package bonjour
 
 import (
 	"fmt"
-	"io"
 	"log"
-	"net/http"
-	"os"
 
 	"golang.org/x/crypto/bcrypt"
 )
@@ -23,11 +20,6 @@ func Main() int {
 	case cliIntentVersionPrint:
 		fmt.Println(buildVersion)
 	case cliIntentServe:
-		// remove in v0.10.0
-		if serveUpdateNoticeIfConfigLocationNotMigrated(options.configPath) {
-			return 1
-		}
-
 		if err := serveApp(options.configPath); err != nil {
 			fmt.Println(err)
 			return 1
@@ -178,42 +170,4 @@ func serveApp(configPath string) error {
 
 	<-exitChannel
 	return nil
-}
-
-func serveUpdateNoticeIfConfigLocationNotMigrated(configPath string) bool {
-	if !isRunningInsideDockerContainer() {
-		return false
-	}
-
-	if _, err := os.Stat(configPath); err == nil {
-		return false
-	}
-
-	// bonjour.yml wasn't mounted to begin with or was incorrectly mounted as a directory
-	if stat, err := os.Stat("bonjour.yml"); err != nil || stat.IsDir() {
-		return false
-	}
-
-	templateFile, _ := templateFS.Open("v0.7-update-notice-page.html")
-	bodyContents, _ := io.ReadAll(templateFile)
-
-	fmt.Println("!!! WARNING !!!")
-	fmt.Println("The default location of bonjour.yml in the Docker image has changed starting from v0.7.0.")
-	fmt.Println("Please see https://github.com/diShine-digital-agency/bonjour/blob/main/docs/v0.7.0-upgrade.md for more information.")
-
-	mux := http.NewServeMux()
-	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.FS(staticFS))))
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusServiceUnavailable)
-		w.Header().Set("Content-Type", "text/html")
-		w.Write([]byte(bodyContents))
-	})
-
-	server := http.Server{
-		Addr:    ":8080",
-		Handler: mux,
-	}
-	server.ListenAndServe()
-
-	return true
 }
