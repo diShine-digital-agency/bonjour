@@ -2,7 +2,7 @@
 
 **A self-hosted dashboard that puts your feeds, data, and tools in one place.**
 
-Bonjour is a self-hosted dashboard you configure with a single YAML file and run as one Go binary (under 20 MB). It aggregates the things you check every day — RSS feeds, Hacker News, weather, stock and crypto prices, YouTube channels, server uptime, Docker container status — into a single page you control.
+Bonjour is a self-hosted dashboard you configure with a single YAML file and run as one Go binary (under 20 MB). It aggregates the things you check every day (RSS feeds, Reddit, Hacker News, weather, stock and crypto prices, YouTube channels, server uptime, Docker container status) into a single page you control.
 
 There is no database, no JavaScript framework, no build pipeline. You write a `bonjour.yml`, run the binary or a Docker container, and open your browser. The dashboard is responsive and works on desktop and mobile.
 
