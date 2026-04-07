@@ -9,12 +9,12 @@ Built by [diShine Digital Agency](https://dishine.it).
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c05ff12e-3002-4a01-8e68-3a682864be2a" alt="Bonjour dashboard — alternative layout" width="49%">
-  <img src="https://github.com/user-attachments/assets/e738cc53-0391-4533-9195-06591ef63fe8" alt="Bonjour dashboard — mobile view" width="49%">
+  <img src="docs/images/themes/bonjour_view_1_main.png" alt="Bonjour dashboard — alternative layout" width="49%">
+  <img src="docs/images/themes/bonjour_view_2_social.png" alt="Bonjour dashboard — social view" width="49%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5cbfc234-715e-45dc-a119-7e9e801ea99d" alt="Bonjour dashboard — theme customization" width="100%">
+  <img src="docs/images/themes/bonjour_view_3_infrastructure.png" alt="Bonjour dashboard — theme infrastructure" width="100%">
 </p>
 
 ---
