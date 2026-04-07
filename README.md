@@ -7,7 +7,6 @@ Built by [diShine Digital Agency](https://dishine.it).
 <p align="center">
 
   ![alt text](/docs/images/themes/bonjour_main_dashboard.png "Logo Title Text 1")
-  [bonjour Dashboard]( "bonjour Dashboard")
 </p>
 
 <p align="center">
