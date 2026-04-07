@@ -1,0 +1,79 @@
+version: 2
+
+builds:
+  - id: bonjour
+    main: .
+    binary: bonjour
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - -s -w -X github.com/diShine-digital-agency/bonjour/internal/bonjour.buildVersion={{.Version}}
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - formats:
+      - tar.gz
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- .Version }}_
+      {{- .Os }}_
+      {{- .Arch }}
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+
+dockers:
+  - dockerfile: Dockerfile.goreleaser
+    ids:
+      - bonjour
+    image_templates:
+      - "ghcr.io/dishine-digital-agency/bonjour:{{ .Version }}-amd64"
+      - "ghcr.io/dishine-digital-agency/bonjour:latest-amd64"
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/amd64"
+    goarch: amd64
+    goos: linux
+
+  - dockerfile: Dockerfile.goreleaser
+    ids:
+      - bonjour
+    image_templates:
+      - "ghcr.io/dishine-digital-agency/bonjour:{{ .Version }}-arm64"
+      - "ghcr.io/dishine-digital-agency/bonjour:latest-arm64"
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/arm64"
+    goarch: arm64
+    goos: linux
+
+docker_manifests:
+  - name_template: "ghcr.io/dishine-digital-agency/bonjour:{{ .Version }}"
+    image_templates:
+      - "ghcr.io/dishine-digital-agency/bonjour:{{ .Version }}-amd64"
+      - "ghcr.io/dishine-digital-agency/bonjour:{{ .Version }}-arm64"
+
+  - name_template: "ghcr.io/dishine-digital-agency/bonjour:latest"
+    image_templates:
+      - "ghcr.io/dishine-digital-agency/bonjour:latest-amd64"
+      - "ghcr.io/dishine-digital-agency/bonjour:latest-arm64"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^ci:"
+
+release:
+  github:
+    owner: diShine-digital-agency
+    name: bonjour
