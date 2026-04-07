@@ -37,7 +37,7 @@ Everything is configured through a single file called `bonjour.yml`.
 3. Run: `./bonjour`
 4. Open http://localhost:8080 in your browser
 
-### Option 1: Docker (Recommended)
+### Option 2: Docker (Recommended)
 
 If you have Docker installed, this is the easiest way:
 

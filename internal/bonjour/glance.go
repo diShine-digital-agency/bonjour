@@ -168,7 +168,7 @@ func newApplication(c *config) (*application, error) {
 			page.Width = ""
 		}
 
-		if page.DesktopNavigationWidth == "" && page.DesktopNavigationWidth != "default" {
+		if page.DesktopNavigationWidth == "" || page.DesktopNavigationWidth == "default" {
 			page.DesktopNavigationWidth = page.Width
 		}
 
@@ -234,7 +234,7 @@ func (p *page) updateOutdatedWidgets() {
 	now := time.Now()
 
 	var wg sync.WaitGroup
-	context := context.Background()
+	ctx := context.Background()
 
 	for w := range p.HeadWidgets {
 		widget := p.HeadWidgets[w]
@@ -246,7 +246,7 @@ func (p *page) updateOutdatedWidgets() {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
-			widget.update(context)
+			widget.update(ctx)
 		}()
 	}
 
@@ -261,7 +261,7 @@ func (p *page) updateOutdatedWidgets() {
 			wg.Add(1)
 			go func() {
 				defer wg.Done()
-				widget.update(context)
+				widget.update(ctx)
 			}()
 		}
 	}
@@ -489,8 +489,10 @@ func (a *application) server() (func() error, func() error) {
 	}
 
 	server := http.Server{
-		Addr:    fmt.Sprintf("%s:%d", a.Config.Server.Host, a.Config.Server.Port),
-		Handler: mux,
+		Addr:              fmt.Sprintf("%s:%d", a.Config.Server.Host, a.Config.Server.Port),
+		Handler:           mux,
+		ReadHeaderTimeout: 10 * time.Second,
+		IdleTimeout:       120 * time.Second,
 	}
 
 	start := func() error {

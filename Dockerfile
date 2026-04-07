@@ -6,8 +6,15 @@ RUN CGO_ENABLED=0 go build -o bonjour .
 
 FROM alpine:3.21
 
+RUN addgroup -S bonjour && adduser -S bonjour -G bonjour
+
 WORKDIR /app
 COPY --from=builder /app/bonjour .
+RUN chown -R bonjour:bonjour /app
+
+USER bonjour
 
 EXPOSE 8080/tcp
+HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
+  CMD wget -q --spider http://localhost:8080/api/healthz || exit 1
 ENTRYPOINT ["/app/bonjour", "--config", "/app/config/bonjour.yml"]

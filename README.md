@@ -53,7 +53,7 @@ It is a fork of [Glance](https://github.com/glanceapp/glance), extended with the
 
 ## Quick Start
 
-**For a complete and step-by-step guide, including installation setup, reffer to the [User Guide](GUIDE.md), a non-technical document dedicated in helping you to set up your dashboard.**
+**For a complete and step-by-step guide, including installation setup, refer to the [User Guide](GUIDE.md), a non-technical document dedicated in helping you to set up your dashboard.**
 
 ### Docker (Recommended)
 
