@@ -1,7 +1,7 @@
 # Bonjour — Comprehensive Tool Audit
 
 **Date:** 2026-04-08  
-**Version Audited:** 1.0.1 (dev build)  
+**Version Audited:** dev (built from source; release versions set via GoReleaser ldflags)  
 **Auditor:** Automated deep analysis  
 **Status:** ✅ All systems operational
 
