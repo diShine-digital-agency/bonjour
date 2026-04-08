@@ -1,7 +1,7 @@
 # Bonjour. A self-hosted dashboard that puts your feeds, data, and tools in one place.
 
 <p align="center">
-  <img src="docs/images/themes/bonjour_02_widget_closeup.webp" alt="Bonjour dashboard — dark theme with news feeds, weather, markets, and calendar widgets" width="65%">
+  <img src="docs/images/themes/bonjour_02_widget_closeup.webp" alt="Meta Inspector widget" width="65%">
 </p>
 
 Bonjour is a self-hosted dashboard you configure with a single YAML file and run as one Go binary (under 20 MB). It aggregates the things you check every day (RSS feeds, Reddit, Hacker News, weather, stock and crypto prices, YouTube channels, server uptime, Docker container status) into a single page you control.
@@ -11,12 +11,12 @@ There is no database, no JavaScript framework, no build pipeline. You write a `b
 Built by [diShine Digital Agency](https://dishine.it).
 
 <p align="center">
-  <img src="docs/images/themes/bonjour_03_morning_briefing_scene.webp" alt="Bonjour dashboard — alternative layout" width="49%">
-  <img src="docs/images/themes/bonjour_05_responsive_dual_device.webp" alt="Bonjour responsiveness" width="49%">
+  <img src="docs/images/themes/bonjour_03_morning_briefing_scene.webp" alt="Meta Inspector morning brief" width="49%">
+  <img src="images/meta_inspector_refined_04_export_workflow.webp" alt="Meta workflow" width="49%">
 </p>
 
 <p align="center">
-  <img src="docs/images/themes/bonjour_04_infrastructure_focus.webp" alt="Bonjour infrastructure" width="60%">
+  <img src="docs/images/themes/bonjour_04_infrastructure_focus.webp" alt="Meta Inspector infrastructure" width="60%">
 </p>
 
 ---
