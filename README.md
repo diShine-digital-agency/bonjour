@@ -241,7 +241,7 @@ Copyright (c) 2026 [diShine Digital Agency](https://dishine.it)
 
 ## About diShine
 
-[diShine](https://dishine.it) is a creative tech agency based in Milan. We build tools for digital consultants, help businesses with AI strategy and MarTech architecture, and open-source the things we wish existed.
+[diShine](https://dishine.it) is a creative tech agency based in Milan. We create digital strategies, build tools for clients, help businesses with AI strategy and MarTech architecture, and open-source some things we wish existed.
 
 - Web: [dishine.it](https://dishine.it)
 - GitHub: [github.com/diShine-digital-agency](https://github.com/diShine-digital-agency)
