@@ -1,19 +1,32 @@
-# Bonjour. A self-hosted dashboard that puts your feeds, data, and tools in one place.
+# 🌟 Bonjour. A self-hosted dashboard that puts your feeds, data, and tools in one place.
+
+<div align="center">
+  
+[![diShine Logo](https://dishine.it/favicon.ico)](https://dishine.it/)
+
+***Transform. Automate. Shine!***
+
+[![Website](https://img.shields.io/badge/Website-dishine.it-blue)](https://dishine.it/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-diShine-blue)](https://linkedin.com/company/100682596)
+[![Location](https://img.shields.io/badge/Location-Milan%2C%20Italy-green)]()
+[![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey)](LICENSE)
 
 <p align="center">
-  <img src="docs/images/themes/bonjour_02_widget_closeup.webp" alt="Bonjour dashboard" width="65%">
+  <img src="docs/images/themes/bonjour_02_widget_closeup.webp" alt="Bonjour dashboard" width="100%">
 </p>
 
-Bonjour is a self-hosted dashboard you configure with a single YAML file and run as one Go binary (under 20 MB). It aggregates the things you check every day (RSS feeds, Reddit, Hacker News, weather, stock and crypto prices, YouTube channels, server uptime, Docker container status) into a single page you control.
-
-There is no database, no JavaScript framework, no build pipeline. You write a `bonjour.yml`, run the binary or a Docker container, and open your browser. The dashboard is responsive and works on desktop and mobile.
-
-Built by [diShine Digital Agency](https://dishine.it).
+*Bonjour is a self-hosted dashboard you configure with a single YAML file and run as one Go binary (under 20 MB). It aggregates the things you check every day (RSS feeds, Reddit, Hacker News, weather, stock and crypto prices, YouTube channels, server uptime, Docker container status) into a single page you control.*
 
 <p align="center">
   <img src="docs/images/themes/bonjour_03_morning_briefing_scene.webp" alt="Bonjour morning brief" width="49%">
   <img src="docs/images/themes/bonjour_05_responsive_dual_device.webp" alt="Bonjour responsive" width="49%">
 </p>
+
+***There is no database, no JavaScript framework, no build pipeline. You write a `bonjour.yml`, run the binary or a Docker container, and open your browser. The dashboard is responsive and works on desktop and mobile.***
+
+Built by [diShine Digital Agency](https://dishine.it).
+
+</div>
 
 <p align="center">
   <img src="docs/images/themes/bonjour_04_infrastructure_focus.webp" alt="Bonjour infrastructure focus" width="60%">
