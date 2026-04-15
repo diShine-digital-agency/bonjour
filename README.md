@@ -225,12 +225,6 @@ Typography: **Inter** (variable font) for UI, **JetBrains Mono** for code/data.
 
 ---
 
-## Acknowledgments
-
-Bonjour builds upon the foundation of [Glance](https://github.com/glanceapp/glance). We gratefully acknowledge the original contributors.
-
----
-
 ## License
 
 GNU Affero General Public License v3.0 — see [LICENSE](LICENSE) for details.
