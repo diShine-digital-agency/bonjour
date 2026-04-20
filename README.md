@@ -9,7 +9,7 @@
 [![Website](https://img.shields.io/badge/Website-dishine.it-blue)](https://dishine.it/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-diShine-blue)](https://linkedin.com/company/100682596)
 [![Location](https://img.shields.io/badge/Location-Milan%2C%20Italy-green)]()
-[![License: GNU V3](https://img.shields.io/badge/License-CC0%201.0-lightgrey)](LICENSE)
+[![License: AGPL v3](https://shields.io)](https://gnu.org)
 
 <p align="center">
   <img src="docs/images/themes/bonjour_02_widget_closeup.webp" alt="Bonjour dashboard" width="100%">
