@@ -8,7 +8,7 @@
 
 [![Website](https://img.shields.io/badge/Website-dishine.it-blue)](https://dishine.it/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-diShine-blue)](https://linkedin.com/company/100682596)
-[![Location](https://img.shields.io/badge/Location-Milan%2C%20Italy-green)]()
+[![Go](https://img.shields.io/badge/Go-1.24%2B-00ADD8)](https://go.dev/)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 
@@ -39,29 +39,29 @@ Built by [diShine Digital Agency](https://dishine.it).
 
 | Feature | Description |
 |---------|-------------|
-| **RSS & News** | Hacker News, Lobsters, Reddit, custom RSS/Atom feeds |
+| **RSS & news** | Hacker News, Lobsters, Reddit, custom RSS/Atom feeds |
 | **Markets** | Real-time stock, crypto, and forex tracking |
 | **Weather** | Multi-location weather with hourly forecasts |
-| **Calendar** | Monthly calendar with customizable first day |
-| **Bookmarks** | Organized link groups with icons |
-| **Search** | Google, DuckDuckGo, Startpage, or custom search engines |
-| **Docker** | Monitor Docker container status |
-| **Server Stats** | CPU, memory, disk usage monitoring |
+| **Calendar** | Monthly calendar with customisable first day |
+| **Bookmarks** | Grouped links with automatic favicons |
+| **Search** | Google, DuckDuckGo, Startpage, Bing, or a custom engine |
+| **Docker** | Container status monitoring |
+| **Server stats** | CPU, memory, and disk usage |
 | **Videos** | YouTube channel feeds |
 | **Twitch** | Live streams and top games |
-| **Monitor** | Uptime monitoring for your services |
-| **Auto-Refresh** | Optional periodic content refresh |
+| **Monitor** | Uptime checks for your services |
+| **Auto-refresh** | Optional periodic content refresh |
 | **Themes** | Built-in theme picker with custom presets |
-| **Authentication** | Password-protected dashboards |
-| **Mobile-First** | Responsive design that works everywhere |
+| **Authentication** | Password-protected dashboards (bcrypt) |
+| **Responsive** | Mobile-first layout that scales to desktop |
 
 ---
 
-## Quick Start
+## Quick start
 
-**For a complete and step-by-step guide, including installation setup, refer to the [User Guide](GUIDE.md), a non-technical document dedicated in helping you to set up your dashboard.**
+For a complete walkthrough — including installation and your first dashboard — read the [User Guide](GUIDE.md). It is written for non-technical users.
 
-### Docker (Recommended)
+### Docker (recommended)
 
 ```bash
 # Create your config file
@@ -90,7 +90,7 @@ Open http://localhost:8080
 ./bonjour --config /path/to/bonjour.yml
 ```
 
-### Build from Source
+### Build from source
 
 ```bash
 git clone https://github.com/diShine-digital-agency/bonjour.git
@@ -101,7 +101,7 @@ go build -o bonjour .
 
 ---
 
-## YAML Configuration
+## YAML configuration
 
 Bonjour is entirely configured through a single `bonjour.yml` file. Here's a minimal example:
 
@@ -163,7 +163,7 @@ services:
       - ./bonjour.yml:/app/config/bonjour.yml
 ```
 
-### Systemd Service
+### Systemd service
 
 ```ini
 [Unit]
@@ -182,16 +182,18 @@ WantedBy=multi-user.target
 
 ---
 
-## CLI Commands
+## CLI commands
 
 ```bash
 bonjour                           # Start the server
 bonjour --config FILE             # Start with a specific config file
-bonjour --version                 # Print version
-bonjour config:validate           # Validate config file
-bonjour config:print              # Print parsed config
+bonjour --version                 # Print the version
+bonjour config:validate           # Validate the config file
+bonjour config:print              # Print the parsed config (with includes)
 bonjour secret:make               # Generate an auth secret key
-bonjour password:hash PASSWORD    # Hash a password for auth config
+bonjour password:hash <password>  # Hash a password for auth config
+bonjour sensors:print             # List available hardware sensors
+bonjour mountpoint:info <path>    # Print details about a mountpoint
 bonjour diagnose                  # Run diagnostic checks
 ```
 
@@ -212,33 +214,39 @@ bonjour diagnose                  # Run diagnostic checks
 
 ---
 
-## diShine design system
+## Design system
 
-Bonjour uses the diShine Digital Agency color palette:
+Bonjour ships with the diShine palette as the default theme:
 
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Deep Purple | `#6C5CE7` | Primary / accent links |
+| Colour | Hex | Usage |
+|--------|-----|-------|
+| Deep purple | `#6C5CE7` | Primary, accent links |
 | Teal | `#00CEC9` | Positive indicators |
 | Dark | `#2D3436` | Background base |
 
-Typography: **Inter** (variable font) for UI, **JetBrains Mono** for code/data.
+Typography: **Inter** (variable) for UI, **JetBrains Mono** for code and tabular data. Both are fully overridable through `theme:` and `branding:` keys — see [docs/themes.md](docs/themes.md).
+
+---
+
+## Credits
+
+Bonjour is a fork of [Glance](https://github.com/glanceapp/glance) by [Svilen Markov](https://github.com/svilenmarkov), with a refreshed brand, additional defaults, and the diShine design system. The original project is licensed under AGPL-3.0 and so is this fork.
 
 ---
 
 ## License
 
-GNU Affero General Public License v3.0 — see [LICENSE](LICENSE) for details.
+GNU Affero General Public License v3.0 — see [LICENSE](LICENSE).
 
-Copyright (c) 2026 [diShine Digital Agency](https://dishine.it)
+Copyright © 2026 [diShine Digital Agency](https://dishine.it).
 
 ---
 
 ## About diShine
 
-[diShine](https://dishine.it) is a creative tech agency based in Milan. We create digital strategies, design process and build tools for clients, help businesses with AI strategy and MarTech architecture, and open-source some things we wish existed.
+[diShine](https://dishine.it) is a creative tech agency based in Milan. We design brand strategies, build digital products, advise on AI and MarTech architecture, and open-source the tools we wish already existed.
 
 - Web: [dishine.it](https://dishine.it)
 - GitHub: [github.com/diShine-digital-agency](https://github.com/diShine-digital-agency)
-- Contact: kevin@dishine.it
+- Contact: [kevin@dishine.it](mailto:kevin@dishine.it)
 

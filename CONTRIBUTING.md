@@ -111,8 +111,8 @@ This project follows the [Contributor Covenant Code of Conduct](.github/CODE_OF_
 
 ## Contact
 
-For questions about contributing, reach out to kevin@dishine.it or open a discussion on the repository.
+For questions about contributing, email [kevin@dishine.it](mailto:kevin@dishine.it) or open a discussion on the repository. For security-sensitive reports, see [SECURITY.md](SECURITY.md).
 
 ---
 
-Bonjour builds upon the foundation of [Glance](https://github.com/glanceapp/glance).
+Bonjour is a fork of [Glance](https://github.com/glanceapp/glance), licensed under AGPL-3.0.

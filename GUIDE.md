@@ -30,14 +30,19 @@ Everything is configured through a single file called `bonjour.yml`.
 
 ## Getting Started
 
-### Option 1: Direct Binary
+### Option 1: direct binary
 
-1. Download the `bonjour` binary from the [Releases page](https://github.com/diShine-digital-agency/bonjour/releases). You'll find, under the changelog, all binaries for Windows, Mac & Linux (for Apple Silicon, download `bonjour_1.0.1_darwin_arm64.tar.gz`, for Intel-based Macs, download `bonjour_1.0.1_darwin_amd64.tar.gz`).
-2. Create a `bonjour.yml` file in the same directory
-3. Run: `./bonjour`
-4. Open http://localhost:8080 in your browser
+1. Download the `bonjour` archive for your platform from the [Releases page](https://github.com/diShine-digital-agency/bonjour/releases). The release notes list every build:
+   - Apple Silicon Mac → `bonjour_<version>_darwin_arm64.tar.gz`
+   - Intel Mac → `bonjour_<version>_darwin_amd64.tar.gz`
+   - Linux x86_64 → `bonjour_<version>_linux_amd64.tar.gz`
+   - Linux ARM (Raspberry Pi 4/5) → `bonjour_<version>_linux_arm64.tar.gz`
+   - Windows x86_64 → `bonjour_<version>_windows_amd64.zip`
+2. Extract the archive and place a `bonjour.yml` next to the binary.
+3. Run `./bonjour` (or `bonjour.exe` on Windows).
+4. Open http://localhost:8080 in your browser.
 
-### Option 2: Docker (Recommended)
+### Option 2: Docker (recommended)
 
 If you have Docker installed, this is the easiest way:
 
@@ -341,4 +346,4 @@ Open an issue on [GitHub](https://github.com/diShine-digital-agency/bonjour/issu
 
 ---
 
-Bonjour builds upon the foundation of [Glance](https://github.com/glanceapp/glance).
+Bonjour is a fork of [Glance](https://github.com/glanceapp/glance), licensed under AGPL-3.0.

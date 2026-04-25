@@ -5,11 +5,27 @@ All notable changes to **Bonjour** will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] — 2026-04-25
+
+### Changed
+
+- **README** — fixed an empty-href Location badge, replaced it with a Go version badge, normalised headings to sentence case, removed a duplicated "Docker Compose" block that had been pasted twice, and rewrote the "About diShine" / credits section so the fork relationship to Glance is stated up front.
+- **README — CLI reference** — added the `sensors:print` and `mountpoint:info` commands that exist in the binary but were missing from the documented list, and matched the syntax shown by `bonjour --help`.
+- **GUIDE — Releases section** — replaced the hard-coded `1.0.1` archive names with version-agnostic placeholders and listed every published platform (darwin amd64/arm64, linux amd64/arm64, windows amd64) instead of only the two Mac builds.
+- **GUIDE / CONTRIBUTING — attribution** — rephrased "Bonjour builds upon the foundation of Glance" to "Bonjour is a fork of Glance, licensed under AGPL-3.0", which is both clearer and accurate to the licence relationship.
+- **SECURITY contact harmonisation** — the root `SECURITY.md` directed reports to `kevin@dishine.it` while `.github/SECURITY.md` and `.github/CODE_OF_CONDUCT.md` used `security@dishine.it`. Standardised on `security@dishine.it` everywhere so that vulnerability reports land in the right inbox regardless of which file a reporter reads first.
+- **`docs/configuration.md`** — added an explanatory note at the top of the file about the inline preview images that were inherited from the upstream Glance documentation and are not reproduced here, with a pointer to the theme gallery (which is fully illustrated) and the upstream reference.
+
+### Verified
+
+- `go build ./...`, `go vet ./...`, and `go test ./...` all pass cleanly on Go 1.26.
+- `bonjour --version`, `bonjour --help`, and every documented `command:action` are present in the compiled binary and match the README.
+
 ## [1.0.1] — 2026-04-07
 
-### GoRelease fix
+### Fixed
 
-Fixing the GoRelease function to get binaries.
+- GoReleaser configuration corrected so that release binaries are produced for every advertised platform.
 
 ## [1.0.0] — 2026-04-07
 

@@ -17,7 +17,7 @@ Security updates will be applied to the latest release.
 If you discover a security vulnerability in Bonjour, please report it responsibly:
 
 1. **Do not** open a public GitHub issue.
-2. **Email** your report to kevin@dishine.it with the subject line `[Bonjour Security]`.
+2. **Email** your report to [security@dishine.it](mailto:security@dishine.it) with the subject line `[Bonjour Security]`.
 3. Include:
    - A description of the vulnerability.
    - Steps to reproduce it.
