@@ -1,5 +1,7 @@
 # Configuring Bonjour
 
+> **Note on screenshots.** This reference is the most exhaustive source of truth for every configuration key. A handful of inline preview images (under `images/...`) refer to assets carried over from the upstream Glance documentation that are not reproduced in this repository. The surrounding text is authoritative; for visual reference see the [upstream Glance docs](https://github.com/glanceapp/glance/blob/main/docs/configuration.md) or the [theme gallery](themes.md), which is fully illustrated.
+
 - [Preconfigured page](#preconfigured-page)
 - [The config file](#the-config-file)
   - [Auto reload](#auto-reload)
