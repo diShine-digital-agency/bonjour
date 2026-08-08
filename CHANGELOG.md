@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Audited
 
 - Full functional audit of the application: `go build`, `go vet`, and `go test -race` all pass.
-- All 27 widget types verified to initialize and render correctly: `bookmarks`, `calendar`, `calendar-legacy`, `change-detection`, `clock`, `custom-api`, `dns-stats`, `docker-containers`, `extension`, `group`, `hacker-news`, `html`, `iframe`, `lobsters`, `markets`, `monitor`, `reddit`, `releases`, `repository`, `rss`, `search`, `server-stats`, `split-column`, `to-do`, `twitch-channels`, `twitch-top-games`, `videos`, `weather`.
+- All 27 widget types verified to initialize and render correctly, including `rss`, `weather`, `markets`, `monitor`, `to-do`, `docker-containers`, `server-stats`, `search`, `bookmarks`, `calendar`, `custom-api`, and `extension` (see `docs/configuration.md` for the full list).
 - All CLI commands verified: `--version`, `--help`, `config:validate`, `config:print`, `secret:make`, `password:hash`, `sensors:print`, `mountpoint:info`, `diagnose`.
 - Password authentication flow verified end-to-end (redirect to `/login`, JSON login, session cookie, rate limiting).
 
