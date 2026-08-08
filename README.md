@@ -209,6 +209,7 @@ bonjour diagnose                  # Run diagnostic checks
 | [Extensions](docs/extensions.md) | Custom widgets and extensions |
 | [Custom API](docs/custom-api.md) | Custom API widget documentation |
 | [Changelog](CHANGELOG.md) | Version history |
+| [Releasing](docs/releasing.md) | How to publish a new version (no command line) |
 | [Contributing](CONTRIBUTING.md) | How to contribute |
 | [Security](SECURITY.md) | Security policy |
 
