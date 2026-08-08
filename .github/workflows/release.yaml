@@ -45,9 +45,17 @@ jobs:
       - name: Set up Docker buildx
         uses: docker/setup-buildx-action@v3
 
+      # The Docker image push to ghcr.io is currently skipped: the repository's
+      # GITHUB_TOKEN is denied `write_package` on ghcr.io (release run failed with
+      # `denied: permission_denied: write_package`), which made the whole release fail
+      # even though the binaries built fine. Skipping Docker keeps the release green and
+      # still ships all binaries. To re-enable image publishing, grant the GITHUB_TOKEN
+      # package write access (Repo Settings -> Actions -> General -> Workflow permissions
+      # -> "Read and write permissions") and remove the `--skip=docker` flag below.
+      # See docs/releasing.md.
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: release
+          args: release --skip=docker
