@@ -40,6 +40,13 @@ tag is invalid — just delete it and try again with the right name (steps below
      `bonjour_1.2.0_linux_amd64.tar.gz`, `bonjour_1.2.0_darwin_arm64.tar.gz`, and
      `bonjour_1.2.0_windows_amd64.zip`.
 
+> **Docker images are temporarily not published.** The push to ghcr.io currently fails
+> because the repository's automatic `GITHUB_TOKEN` is denied `write_package` access on
+> ghcr.io (`denied: permission_denied: write_package`). To avoid the whole release failing,
+> the Docker push is skipped for now (see `.github/workflows/release.yaml`). To re-enable
+> Docker image publishing, see the note in "What happens automatically after you publish"
+> below.
+
 That's it — the new version is online.
 
 ---
@@ -68,6 +75,18 @@ The file `.github/workflows/release.yaml` runs a tool called GoReleaser which:
 - attaches those files to the GitHub release,
 - builds and pushes the Docker images to
   `ghcr.io/dishine-digital-agency/bonjour` with tags `:<version>` and `:latest`.
+
+> **Docker push is currently disabled.** Pushing the images requires the repository's
+> automatic `GITHUB_TOKEN` to have package **write** access on ghcr.io. It is currently
+> denied (`denied: permission_denied: write_package`), so the workflow skips the Docker
+> step (`goreleaser release --skip=docker`) to keep the release green.
+>
+> **To re-enable image publishing:**
+> 1. In the repository, go to **Settings → Actions → General → Workflow permissions**
+>    and select **"Read and write permissions"** (so the token can write packages), then save.
+> 2. Remove the `--skip=docker` flag from the `Run GoReleaser` step in
+>    `.github/workflows/release.yaml`.
+> 3. Publish a new patch release (e.g. `v1.2.1`) — the Docker images should now push.
 
 The version you type in the tag is also embedded into the binary, so running
 `bonjour --version` on a downloaded release prints that same version.
