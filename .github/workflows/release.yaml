@@ -13,6 +13,17 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: Validate tag format
+        run: |
+          TAG="${GITHUB_REF#refs/tags/}"
+          if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Tag '$TAG' is not a valid release version."
+            echo "Release tags must look like v1.2.0 (a 'v' followed by three numbers separated by dots, no extra characters)."
+            echo "Delete this tag/release and re-tag with the correct format, e.g.: git tag v1.2.0 && git push origin v1.2.0"
+            exit 1
+          fi
+          echo "Tag '$TAG' is valid."
+
       - name: Checkout the target Git reference
         uses: actions/checkout@v4
         with:

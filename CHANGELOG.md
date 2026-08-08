@@ -5,7 +5,29 @@ All notable changes to **Bonjour** will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] — 2026-08-08
+
+### Audited
+
+- Full functional audit of the application: `go build`, `go vet`, and `go test -race` all pass.
+- All 27 widget types verified to initialize and render correctly: `bookmarks`, `calendar`, `calendar-legacy`, `change-detection`, `clock`, `custom-api`, `dns-stats`, `docker-containers`, `extension`, `group`, `hacker-news`, `html`, `iframe`, `lobsters`, `markets`, `monitor`, `reddit`, `releases`, `repository`, `rss`, `search`, `server-stats`, `split-column`, `to-do`, `twitch-channels`, `twitch-top-games`, `videos`, `weather`.
+- All CLI commands verified: `--version`, `--help`, `config:validate`, `config:print`, `secret:make`, `password:hash`, `sensors:print`, `mountpoint:info`, `diagnose`.
+- Password authentication flow verified end-to-end (redirect to `/login`, JSON login, session cookie, rate limiting).
+
+### Fixed
+
+- **Release workflow** — added a tag-format validation step to `.github/workflows/release.yaml`. A malformed tag (e.g. `v.1.0.2`) now fails immediately with a clear error message instead of producing a broken release. Tags must be in the form `vMAJOR.MINOR.PATCH` (e.g. `v1.2.0`).
+
+### Docs
+
+- Corrected the changelog version history (the previous `1.0.2` entry was tagged `v.1.0.2` against the wrong commit; see below).
+- Added a plain-language release guide (`docs/releasing.md`) so a new version can be published without using the command line.
+
 ## [1.0.2] — 2026-04-25
+
+> **Note:** this version was tagged incorrectly as `v.1.0.2` (a malformed tag pointing at the
+> "v1.2.0 update" commit), which caused the release workflow to fail. The intended content of
+> this release is what is now published as **1.2.0**. The changes below were actually shipped in 1.2.0.
 
 ### Changed
 
